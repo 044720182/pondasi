@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * https://www.wimdeblauwe.com/blog/2023/01/24/using-google-login-with-spring-boot-3-and-thymeleaf/
+ * https://www.codejava.net/frameworks/spring-boot/social-login-with-google-and-facebook-examples
  */
 
 @Controller
