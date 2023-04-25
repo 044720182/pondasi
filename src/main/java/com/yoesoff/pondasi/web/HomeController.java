@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * https://www.wimdeblauwe.com/blog/2023/01/24/using-google-login-with-spring-boot-3-and-thymeleaf/
- * https://www.codejava.net/frameworks/spring-boot/social-login-with-google-and-facebook-examples
+ * https://www.javaguides.net/2018/10/user-registration-module-using-springboot-springmvc-springsecurity-hibernate5-thymeleaf-mysql.html
+ * <p>
+ * https://maciejwalkowiak.com/blog/spring-boot-thymeleaf-tailwindcss/
  */
 
 @Controller
@@ -17,8 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeController {
 
     @GetMapping
-    public String home(Model model,
-                       @AuthenticationPrincipal OAuth2User user) {
+    public String home(Model model, @AuthenticationPrincipal OAuth2User user) {
         String name = user.getAttribute("name");
         String email = user.getAttribute("email");
         model.addAttribute("name", name);

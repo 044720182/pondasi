@@ -14,6 +14,32 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
+                  name: username
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: true
+                    unique: true
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: role
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: provider
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: enable
+                  type: tinyint
+                  constraints:
+                    nullable: false
+              - column:
                   name: name
                   type: VARCHAR(255)
                   constraints:
@@ -23,11 +49,13 @@ databaseChangeLog:
                   type: VARCHAR(255)
                   constraints:
                     nullable: false
+                    unique: true
               - column:
                   name: email
                   type: VARCHAR(255)
                   constraints:
                     nullable: false
+                    unique: true
               - column:
                   name: phone
                   type: VARCHAR(255)

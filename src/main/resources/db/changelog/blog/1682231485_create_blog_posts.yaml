@@ -14,6 +14,11 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
+                  name: user_id
+                  type: INT
+                  constraints:
+                    nullable: true
+              - column:
                   name: title
                   type: VARCHAR(255)
                   constraints:
@@ -38,3 +43,12 @@ databaseChangeLog:
                   type: TIMESTAMP
                   constraints:
                     nullable: true
+        - addForeignKeyConstraint:
+            baseTableName: blog_posts
+            baseColumnNames: user_id
+            constraintName: fk_blog_posts_users
+            referencedColumnNames: id
+            referencedTableName: users
+            onDelete: CASCADE
+            onUpdate: RESTRICT
+            validate: true

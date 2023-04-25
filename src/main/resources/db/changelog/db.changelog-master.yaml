@@ -1,7 +1,5 @@
 databaseChangeLog:
   - include:
-      file: /db/changelog/blog/1682231485_create_blog_posts.yaml
-  - include:
       file: /db/changelog/user/1682236468_create_users.yaml
   - include:
-      file: /db/changelog/user/1682237185_addColumn_user_id_to_blog_posts.yaml
+      file: /db/changelog/blog/1682231485_create_blog_posts.yaml
